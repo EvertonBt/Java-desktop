@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmvc.controller.FXMLVBoxMainController">
+   <children>
+      <MenuBar prefHeight="24.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" onAction="#handleMenuItemCadastrosClientes" text="Cadastros">
+            <items>
+                  <MenuItem fx:id="menuItemCadastrosClientes" mnemonicParsing="false" onAction="#handleMenuItemCadastrosClientes" text="Clientes" />
+                  <MenuItem fx:id="menuItemProdutos" mnemonicParsing="false" onAction="#handleMenuItemCadastrosProdutos" text="Produtos" />
+                  <MenuItem fx:id="menuItemServicos" mnemonicParsing="false" text="Serviços" onAction="#handleMenuItemCadastrosServicos"/>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Processos">
+            <items>
+                  <MenuItem fx:id="menuItemConsultas" mnemonicParsing="false" text="Consultas" onAction="#handleMenuItemCadastrosConsultas" />
+              <MenuItem fx:id="menuItemProcessosVendas" mnemonicParsing="false" onAction="#handleMenuItemProcessosVendas" text="Vendas" />
+                  <MenuItem fx:id="menuItemFinanceiro" mnemonicParsing="false" text="Fluxo Financeiro" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Gráficos">
+               <items>
+                  <MenuItem fx:id="menuItemGraficosVendasPorMes" mnemonicParsing="false" onAction="#handleMenuItemGraficosVendasPorMes" text="Vendas por Mês" />
+                  <MenuItem fx:id="menuItemGraficosConsultasPorMes" mnemonicParsing="false" onAction="#handleMenuConsultasPorMes" text="Consultas por Mês" />
+                 <MenuItem fx:id="menuItemGraficoServicos" mnemonicParsing="false" onAction="#handleMenuGraficoServicos" text="Gráfico Serviços" />
+             </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Relatórios">
+            <items>
+              <MenuItem fx:id="menuItemRelatoriosQuantidadeProdutos" mnemonicParsing="false" onAction="#handleMenuItemRelatoriosQuantidadeProdutos" text="Quantidade de Produtos em Estoque" />
+              <MenuItem fx:id="menuItemRelatoriosQuantidadeServicos" mnemonicParsing="false" onAction="#handleMenuItemRelatorioServicos" text="Lista de Servicos e procedimentos" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Oppções">
+              <items>
+                <MenuItem fx:id="menuSair" mnemonicParsing="false" text="Sair"  onAction="#handleMenuSair"/>
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane fx:id="anchorPane" />
+   </children>
+</VBox>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="376.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmvc.controller.ConsultaListagemController">
+    <children>
+            <Group AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                <children>
+                    <Button fx:id="buttonAlterar" layoutX="204.0" layoutY="288.0" mnemonicParsing="false" onAction="#handleButtonAlterar" prefHeight="25.0" prefWidth="65.0" text="Alterar" visible="false" />
+                </children>
+            </Group>
+      <TableView fx:id="tableViewConsultas" layoutY="48.0" prefHeight="328.0" prefWidth="600.0">
+        <columns>
+            <TableColumn fx:id="tableColumnConsultaCodigo" prefWidth="71.0" text="Código" />
+          <TableColumn fx:id="tableColumnConsultaData" prefWidth="121.0" text="Data" />
+          <TableColumn fx:id="tableColumnConsultaCliente" prefWidth="161.0" text="Cliente" />
+            <TableColumn fx:id="tableColumnConsultaValor" prefWidth="94.0" text="Valor" />
+            <TableColumn fx:id="tableColumnConsultaPago" prefWidth="152.0" text="Estado" />
+        </columns>
+      </TableView>
+              <Button fx:id="buttonInserir" layoutX="348.0" layoutY="6.0" mnemonicParsing="false" onAction="#handleButtonInserir" prefHeight="25.0" prefWidth="65.0" text="Inserir" />
+              <Button fx:id="buttonRemover" layoutX="513.0" layoutY="6.0" mnemonicParsing="false" onAction="#handleButtonRemover" prefHeight="25.0" prefWidth="65.0" text="Remover" />
+      <Button fx:id="buttonAlterar" layoutX="429.0" layoutY="6.0" mnemonicParsing="false" onAction="#handleButtonAlterar" prefHeight="25.0" prefWidth="65.0" text="Alterar" />
+      <DatePicker fx:id="dataPesquisa" layoutX="85.0" layoutY="6.0"  onAction="#carregarTableViewConsultas" />
+      <Label layoutX="29.0" layoutY="10.0" prefHeight="17.0" prefWidth="49.0" text="Filtro:" textFill="#22249e">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
